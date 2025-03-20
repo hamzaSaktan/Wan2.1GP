@@ -2108,7 +2108,7 @@ if __name__ == "__main__":
 
     server_name = args.server_name
     if len(server_name) == 0:
-        server_name = os.getenv("SERVER_NAME", "localhost")
+        server_name = os.getenv("SERVER_NAME", "127.0.0.1")
 
         
     demo = create_demo()
@@ -2120,6 +2120,6 @@ if __name__ == "__main__":
             url = "http://" + server_name 
         webbrowser.open(url + ":" + str(server_port), new = 0, autoraise = True)
 
-    demo.launch(server_name=server_name, server_port=server_port, share=args.share, allowed_paths=[save_path])
+    demo.launch(server_name=server_name, server_port=server_port, share=args.share, server_port_range=(7860, 8000), allowed_paths=[save_path])
 
  
