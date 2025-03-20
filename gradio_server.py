@@ -287,7 +287,7 @@ server_config_filename = "gradio_config.json"
 
 if not Path(server_config_filename).is_file():
     server_config = {"attention_mode" : "flash",
-                     "transformer_filename": transformer_choices_t2v[2],
+                     "transformer_filename": transformer_choices_t2v[0],
                      "transformer_filename_i2v": transformer_choices_i2v[1],  ########
                      "text_encoder_filename" : text_encoder_choices[1],
                      "save_path": os.path.join(os.getcwd(), "gradio_outputs"),
